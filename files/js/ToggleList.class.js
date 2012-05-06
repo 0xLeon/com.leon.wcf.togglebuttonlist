@@ -13,7 +13,7 @@ var ToggleList = Class.create({
 	initialize: function(id) {
 		$$('#'+id+' .toggleListListElement').each(function(li) {
 			var label = li.down('.toggleListLabel');
-			var checkbox = li.down('.toggleListCheckBox');
+			var checkbox = li.down('.toggleListCheckbox');
 			
 			checkbox.addClassName('hidden');
 			if (checkbox.checked) label.addClassName('selected');
@@ -21,46 +21,45 @@ var ToggleList = Class.create({
 			li.observe('click', function(event) {
 				this.toggle(event);
 			}.bindAsEventListener(this));
-			li.observe('mousemove', function(event) {
-				this.toggle(event);
+			li.observe('mouseover', function(event) {
+				this.hover(event);
 			}.bindAsEventListener(this));
 			li.observe('mouseout', function(event) {
-				this.toggle(event);
+				this.hover(event);
 			}.bindAsEventListener(this));
-		});
+		}, this);
 	},
 	
 	toggle: function(event) {
 		var target = event.findElement('li.toggleListListElement');
 		var label = target.down('.toggleListLabel')
-		var checkbox = target.down('.toggleListCheckBox');
+		var checkbox = target.down('.toggleListCheckbox');
+		var checked = !checkbox.checked;
 		
-		if (event.type == 'click') {
-			checkbox.checked = !checkbox.checked;
-			label.toggleClassName('selected');
-		}
-		
-		if (checkbox.checked) {
-			if (event.type == 'mousemove' || event.type == 'focus' || event.type == 'change') {
-				label.toggleClassName('hoverSelected');
-			} else {
-				label.toggleClassName('hoverSelected');
-			}
-			
-			if (event.type !== 'click') {
-				label.toggleClassName('hoverSelected');
-			}
+		if (checked) {
+			label.removeClassName('hover');
+			label.addClassName('selected');
+			label.addClassName('hoverSelected');
 		}
 		else {
-			if (event.type == 'mousemove' || event.type == 'focus' || event.type == 'change') {
-				label.toggleClassName('hover');
-			} else {
-				label.toggleClassName('hover');
-			}
-			
-			if (event.type !== 'click') {
-				label.toggleClassName('hoverSelected');
-			}
+			label.removeClassName('selected');
+			label.removeClassName('hoverSelected');
+			label.addClassName('hover');
+		}
+		
+		checkbox.checked = checked;
+	},
+	
+	hover: function(event) {
+		var target = event.findElement('li.toggleListListElement');
+		var label = target.down('.toggleListLabel');
+		var checkbox = target.down('.toggleListCheckbox');
+		
+		if (label.hasClassName('selected')) {
+			label.toggleClassName('hoverSelected');
+		}
+		else {
+			label.toggleClassName('hover');
 		}
 	}
 });
