@@ -17,37 +17,37 @@
 			<value><![CDATA[container2.background.color]]></value>
 		</attribute>
 		<attribute>
-			<selector><![CDATA[.toggleList label.selected]]></selector>
+			<selector><![CDATA[.toggleList label[class~="selected"]]]></selector>
 			<name><![CDATA[background-color]]></name>
 			<value><![CDATA[selection.background.color]]></value>
 		</attribute>
 		<attribute>
-			<selector><![CDATA[.toggleList label.selected]]></selector>
+			<selector><![CDATA[.toggleList label[class~="selected"]]]></selector>
 			<name><![CDATA[color]]></name>
 			<value><![CDATA[selection.font.color]]></value>
 		</attribute>
 		<attribute>
-			<selector><![CDATA[.toggleList label.hover]]></selector>
+			<selector><![CDATA[.toggleList label[class~="hover"]]]></selector>
 			<name><![CDATA[background-color]]></name>
 			<value><![CDATA[container1.background.color]]></value>
 		</attribute>
 		<attribute>
-			<selector><![CDATA[.toggleList label.hover]]></selector>
+			<selector><![CDATA[.toggleList label[class~="hover"]]]></selector>
 			<name><![CDATA[border-color]]></name>
 			<value><![CDATA[selection.border.color]]></value>
 		</attribute>
 		<attribute>
-			<selector><![CDATA[.toggleList label.hoverSelected]]></selector>
+			<selector><![CDATA[.toggleList label[class~="hoverSelected"]]]></selector>
 			<name><![CDATA[background-color]]></name>
 			<value><![CDATA[selection.background.color]]></value>
 		</attribute>
 		<attribute>
-			<selector><![CDATA[.toggleList label.hoverSelected]]></selector>
+			<selector><![CDATA[.toggleList label[class~="hoverSelected"]]]></selector>
 			<name><![CDATA[border-color]]></name>
 			<value><![CDATA[selection.border.color]]></value>
 		</attribute>
 		<attribute>
-			<selector><![CDATA[.toggleList label.hoverSelected]]></selector>
+			<selector><![CDATA[.toggleList label[class~="hoverSelected"]]]></selector>
 			<name><![CDATA[color]]></name>
 			<value><![CDATA[selection.font.color]]></value>
 		</attribute>
@@ -57,7 +57,7 @@
 			<value><![CDATA[container1.background.color]]></value>
 		</attribute>
 		<attribute>
-			<selector><![CDATA[fieldset .toggleList label.hover]]></selector>
+			<selector><![CDATA[fieldset .toggleList label[class~="hover"]]]></selector>
 			<name><![CDATA[background-color]]></name>
 			<value><![CDATA[container2.background.color]]></value>
 		</attribute>
@@ -67,7 +67,7 @@
 			<value><![CDATA[container2.background.color]]></value>
 		</attribute>
 		<attribute>
-			<selector><![CDATA[fieldset fieldset .toggleList label.hover]]></selector>
+			<selector><![CDATA[fieldset fieldset .toggleList label[class~="hover"]]]></selector>
 			<name><![CDATA[background-color]]></name>
 			<value><![CDATA[container1.background.color]]></value>
 		</attribute>
