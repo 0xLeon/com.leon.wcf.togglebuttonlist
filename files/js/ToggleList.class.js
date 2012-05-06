@@ -12,13 +12,18 @@ var ToggleList = Class.create({
 	 */
 	initialize: function(id) {
 		this.id = id;
+		this.startState = [];
 		
 		$$('#'+this.id+' .toggleListListElement').each(function(li) {
 			var label = li.down('.toggleListLabel');
 			var checkbox = li.down('.toggleListCheckbox');
 			
 			checkbox.addClassName('hidden');
-			if (checkbox.checked) label.addClassName('selected');
+			
+			if (checkbox.checked) {
+				label.addClassName('selected');
+				this.startState.push(parseInt(checkbox.getAttribute('value')));
+			}
 			
 			li.observe('click', function(event) {
 				this.toggle(event);
@@ -86,16 +91,15 @@ var ToggleList = Class.create({
 	},
 	
 	reset: function() {
-		// todo: compare with original $ribbonIDs array from template egine
 		$$('#'+this.id+' .toggleListCheckbox').each(function(box) {
 			var label = box.up('label');
 			
-			if (box.checked) {
+			if (this.startState.indexOf(parseInt(box.getAttribute('value'))) > -1) {
 				label.addClassName('selected');
 			}
 			else {
 				label.removeClassName('selected');
 			}
-		});
+		}, this);
 	}
 });
