@@ -11,7 +11,9 @@ var ToggleList = Class.create({
 	 * @param	String	id	id of the toggle list
 	 */
 	initialize: function(id) {
-		$$('#'+id+' .toggleListListElement').each(function(li) {
+		this.id = id;
+		
+		$$('#'+this.id+' .toggleListListElement').each(function(li) {
 			var label = li.down('.toggleListLabel');
 			var checkbox = li.down('.toggleListCheckbox');
 			
@@ -37,6 +39,14 @@ var ToggleList = Class.create({
 				// }.bindAsEventListener(this));
 			// }, this);
 		}, this);
+		
+		var form = $(this.id).up('form');
+		
+		if (form) {
+			form.observe('reset', function(event) {
+				this.reset();
+			}.bindAsEventListener(this));
+		}
 	},
 	
 	toggle: function(event) {
@@ -73,5 +83,19 @@ var ToggleList = Class.create({
 		else {
 			label.toggleClassName('hover');
 		}
+	},
+	
+	reset: function() {
+		// todo: compare with original $ribbonIDs array from template egine
+		$$('#'+this.id+' .toggleListCheckbox').each(function(box) {
+			var label = box.up('label');
+			
+			if (box.checked) {
+				label.addClassName('selected');
+			}
+			else {
+				label.removeClassName('selected');
+			}
+		});
 	}
 });
