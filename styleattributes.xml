@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/styleattributes.xsd">
+	<import>
+		<attribute>
+			<selector><![CDATA[.toggleList ul]]></selector>
+			<name><![CDATA[background-color]]></name>
+			<value><![CDATA[container.border.inner.color]]></value>
+		</attribute>
+		<attribute>
+			<selector><![CDATA[.toggleList ul]]></selector>
+			<name><![CDATA[border-color]]></name>
+			<value><![CDATA[container.border.outer.color]]></value>
+		</attribute>
+		<attribute>
+			<selector><![CDATA[.toggleList label]]></selector>
+			<name><![CDATA[background-color]]></name>
+			<value><![CDATA[container2.background.color]]></value>
+		</attribute>
+		<attribute>
+			<selector><![CDATA[.toggleList label.selected]]></selector>
+			<name><![CDATA[background-color]]></name>
+			<value><![CDATA[selection.background.color]]></value>
+		</attribute>
+		<attribute>
+			<selector><![CDATA[.toggleList label.selected]]></selector>
+			<name><![CDATA[color]]></name>
+			<value><![CDATA[selection.font.color]]></value>
+		</attribute>
+		<attribute>
+			<selector><![CDATA[.toggleList label.hover]]></selector>
+			<name><![CDATA[background-color]]></name>
+			<value><![CDATA[container1.background.color]]></value>
+		</attribute>
+		<attribute>
+			<selector><![CDATA[.toggleList label.hover]]></selector>
+			<name><![CDATA[border-color]]></name>
+			<value><![CDATA[selection.border.color]]></value>
+		</attribute>
+		<attribute>
+			<selector><![CDATA[.toggleList label.hoverSelected]]></selector>
+			<name><![CDATA[background-color]]></name>
+			<value><![CDATA[selection.background.color]]></value>
+		</attribute>
+		<attribute>
+			<selector><![CDATA[.toggleList label.hoverSelected]]></selector>
+			<name><![CDATA[border-color]]></name>
+			<value><![CDATA[selection.border.color]]></value>
+		</attribute>
+		<attribute>
+			<selector><![CDATA[.toggleList label.hoverSelected]]></selector>
+			<name><![CDATA[color]]></name>
+			<value><![CDATA[selection.font.color]]></value>
+		</attribute>
+		<attribute>
+			<selector><![CDATA[fieldset .toggleList label]]></selector>
+			<name><![CDATA[background-color]]></name>
+			<value><![CDATA[container1.background.color]]></value>
+		</attribute>
+		<attribute>
+			<selector><![CDATA[fieldset .toggleList label.hover]]></selector>
+			<name><![CDATA[background-color]]></name>
+			<value><![CDATA[container2.background.color]]></value>
+		</attribute>
+		<attribute>
+			<selector><![CDATA[fieldset fieldset .toggleList label]]></selector>
+			<name><![CDATA[background-color]]></name>
+			<value><![CDATA[container2.background.color]]></value>
+		</attribute>
+		<attribute>
+			<selector><![CDATA[fieldset fieldset .toggleList label.hover]]></selector>
+			<name><![CDATA[background-color]]></name>
+			<value><![CDATA[container1.background.color]]></value>
+		</attribute>
+	</import>
+</data>

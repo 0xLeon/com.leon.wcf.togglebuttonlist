@@ -1,0 +1,47 @@
+/* ### -- -- -- -- -- Toggle List Styles -- -- -- -- -- ### */
+/* 
+
+File: toggleList.css 
+Copyright: 2012 Stefan Hahn
+License: GNU Lesser General Public License <http://opensource.org/licenses/lgpl-license.php>
+
+*/
+
+.toggleList ul {
+	list-style-type: none;
+	border-width: 1px;
+	border-style: solid;
+	margin: 0;
+	padding: 0 0 1px 1px;
+}
+
+.toggleList ul:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.toggleList li {
+	float: left;
+	display: inline-block;
+}
+
+.toggleList label {
+	text-align: center;
+	margin: 1px 1px 0 0;
+	padding: 4px;
+	display: block;
+	cursor: auto;
+}
+
+.toggleList label.hover,
+.toggleList label.hoverSelected {
+	border-width: 1px;
+	border-style: solid;
+	padding: 3px;
+	cursor: pointer;
+}
+
+.toggleList {
+	overflow: auto;
+}
