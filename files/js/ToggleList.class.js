@@ -21,20 +21,30 @@ var ToggleList = Class.create({
 			li.observe('click', function(event) {
 				this.toggle(event);
 			}.bindAsEventListener(this));
-			li.observe('mouseover', function(event) {
-				this.hover(event);
+			checkbox.observe('change', function(event) {
+				this.toggle(event);
 			}.bindAsEventListener(this));
-			li.observe('mouseout', function(event) {
-				this.hover(event);
-			}.bindAsEventListener(this));
+			
+			['mouseover', 'mouseout'].each(function(eventType) {
+				li.observe(eventType, function(event) {
+					this.hover(event);
+				}.bindAsEventListener(this));
+			}, this);
+			// todo: add 'hovering' support for pointerless devices
+			// ['focus', 'blur'].each(function(eventType) {
+				// checkbox.observe(eventType, function(event) {
+					// this.hover(event);
+				// }.bindAsEventListener(this));
+			// }, this);
 		}, this);
 	},
 	
 	toggle: function(event) {
+		var isClickEvent = (event.type == 'click');
 		var target = event.findElement('li.toggleListListElement');
 		var label = target.down('.toggleListLabel')
 		var checkbox = target.down('.toggleListCheckbox');
-		var checked = !checkbox.checked;
+		var checked = ((isClickEvent) ? (!checkbox.checked) : (checkbox.checked));
 		
 		if (checked) {
 			label.removeClassName('hover');
@@ -47,7 +57,9 @@ var ToggleList = Class.create({
 			label.addClassName('hover');
 		}
 		
-		checkbox.checked = checked;
+		if (isClickEvent) {
+			checkbox.checked = checked;
+		}
 	},
 	
 	hover: function(event) {
