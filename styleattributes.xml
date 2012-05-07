@@ -2,72 +2,72 @@
 <data xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/styleattributes.xsd">
 	<import>
 		<attribute>
-			<selector><![CDATA[.toggleButtonlist ul]]></selector>
+			<selector><![CDATA[.toggleButtonList ul]]></selector>
 			<name><![CDATA[background-color]]></name>
 			<value><![CDATA[container.border.inner.color]]></value>
 		</attribute>
 		<attribute>
-			<selector><![CDATA[.toggleButtonlist ul]]></selector>
+			<selector><![CDATA[.toggleButtonList ul]]></selector>
 			<name><![CDATA[border-color]]></name>
 			<value><![CDATA[container.border.outer.color]]></value>
 		</attribute>
 		<attribute>
-			<selector><![CDATA[.toggleButtonlist label]]></selector>
+			<selector><![CDATA[.toggleButtonList label]]></selector>
 			<name><![CDATA[background-color]]></name>
 			<value><![CDATA[container2.background.color]]></value>
 		</attribute>
 		<attribute>
-			<selector><![CDATA[.toggleButtonlist label[class~="selected"]]]></selector>
+			<selector><![CDATA[.toggleButtonList label[class~="selected"]]]></selector>
 			<name><![CDATA[background-color]]></name>
 			<value><![CDATA[selection.background.color]]></value>
 		</attribute>
 		<attribute>
-			<selector><![CDATA[.toggleButtonlist label[class~="selected"]]]></selector>
+			<selector><![CDATA[.toggleButtonList label[class~="selected"]]]></selector>
 			<name><![CDATA[color]]></name>
 			<value><![CDATA[selection.font.color]]></value>
 		</attribute>
 		<attribute>
-			<selector><![CDATA[.toggleButtonlist label[class~="hover"]]]></selector>
+			<selector><![CDATA[.toggleButtonList label[class~="hover"]]]></selector>
 			<name><![CDATA[background-color]]></name>
 			<value><![CDATA[container1.background.color]]></value>
 		</attribute>
 		<attribute>
-			<selector><![CDATA[.toggleButtonlist label[class~="hover"]]]></selector>
+			<selector><![CDATA[.toggleButtonList label[class~="hover"]]]></selector>
 			<name><![CDATA[border-color]]></name>
 			<value><![CDATA[selection.border.color]]></value>
 		</attribute>
 		<attribute>
-			<selector><![CDATA[.toggleButtonlist label[class~="hoverSelected"]]]></selector>
+			<selector><![CDATA[.toggleButtonList label[class~="hoverSelected"]]]></selector>
 			<name><![CDATA[background-color]]></name>
 			<value><![CDATA[selection.background.color]]></value>
 		</attribute>
 		<attribute>
-			<selector><![CDATA[.toggleButtonlist label[class~="hoverSelected"]]]></selector>
+			<selector><![CDATA[.toggleButtonList label[class~="hoverSelected"]]]></selector>
 			<name><![CDATA[border-color]]></name>
 			<value><![CDATA[selection.border.color]]></value>
 		</attribute>
 		<attribute>
-			<selector><![CDATA[.toggleButtonlist label[class~="hoverSelected"]]]></selector>
+			<selector><![CDATA[.toggleButtonList label[class~="hoverSelected"]]]></selector>
 			<name><![CDATA[color]]></name>
 			<value><![CDATA[selection.font.color]]></value>
 		</attribute>
 		<attribute>
-			<selector><![CDATA[fieldset .toggleButtonlist label]]></selector>
+			<selector><![CDATA[fieldset .toggleButtonList label]]></selector>
 			<name><![CDATA[background-color]]></name>
 			<value><![CDATA[container1.background.color]]></value>
 		</attribute>
 		<attribute>
-			<selector><![CDATA[fieldset .toggleButtonlist label[class~="hover"]]]></selector>
+			<selector><![CDATA[fieldset .toggleButtonList label[class~="hover"]]]></selector>
 			<name><![CDATA[background-color]]></name>
 			<value><![CDATA[container2.background.color]]></value>
 		</attribute>
 		<attribute>
-			<selector><![CDATA[fieldset fieldset .toggleButtonlist label]]></selector>
+			<selector><![CDATA[fieldset fieldset .toggleButtonList label]]></selector>
 			<name><![CDATA[background-color]]></name>
 			<value><![CDATA[container2.background.color]]></value>
 		</attribute>
 		<attribute>
-			<selector><![CDATA[fieldset fieldset .toggleButtonlist label[class~="hover"]]]></selector>
+			<selector><![CDATA[fieldset fieldset .toggleButtonList label[class~="hover"]]]></selector>
 			<name><![CDATA[background-color]]></name>
 			<value><![CDATA[container1.background.color]]></value>
 		</attribute>
