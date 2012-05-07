@@ -2,11 +2,11 @@
  * @author	Stefan Hahn
  * @copyright	2012 Stefan Hahn
  * @license	GNU Lesser General Public License <http://opensource.org/licenses/lgpl-license.php>
- * @package	com.leon.wcf.togglelist
+ * @package	com.leon.wcf.togglebuttonlist
  */
-var ToggleList = Class.create({
+var ToggleButtonList = Class.create({
 	/**
-	 * Initializes a toggle list
+	 * Initializes a toggle button list
 	 * 
 	 * @param	String	id	id of the toggle list
 	 */
@@ -14,9 +14,9 @@ var ToggleList = Class.create({
 		this.id = id;
 		this.startState = [];
 		
-		$$('#'+this.id+' .toggleListListElement').each(function(li) {
-			var label = li.down('.toggleListLabel');
-			var checkbox = li.down('.toggleListCheckbox');
+		$$('#'+this.id+' .toggleButtonListListElement').each(function(li) {
+			var label = li.down('.toggleButtonListLabel');
+			var checkbox = li.down('.toggleButtonListCheckbox');
 			
 			checkbox.addClassName('hidden');
 			
@@ -26,7 +26,7 @@ var ToggleList = Class.create({
 			}
 			
 			li.observe('click', function(event) {
-				var checkbox = event.findElement('.toggleListListElement').down('.toggleListCheckbox');
+				var checkbox = event.findElement('.toggleButtonListListElement').down('.toggleButtonListCheckbox');
 				
 				checkbox.click();
 			}.bindAsEventListener(this));
@@ -36,7 +36,7 @@ var ToggleList = Class.create({
 			
 			['mouseover', 'mouseout'].each(function(eventType) {
 				li.observe(eventType, function(event) {
-					var checkbox = event.findElement('.toggleListListElement').down('.toggleListCheckbox');
+					var checkbox = event.findElement('.toggleButtonListListElement').down('.toggleButtonListCheckbox');
 					
 					if (document.activeElement === checkbox) {
 						checkbox.blur();
@@ -64,9 +64,9 @@ var ToggleList = Class.create({
 	},
 	
 	toggle: function(event) {
-		var target = event.findElement('.toggleListListElement');
-		var label = target.down('.toggleListLabel')
-		var checkbox = target.down('.toggleListCheckbox');
+		var target = event.findElement('.toggleButtonListListElement');
+		var label = target.down('.toggleButtonListLabel')
+		var checkbox = target.down('.toggleButtonListCheckbox');
 		var checked = checkbox.checked;
 		
 		if (checked) {
@@ -82,9 +82,9 @@ var ToggleList = Class.create({
 	},
 	
 	hover: function(event) {
-		var target = event.findElement('li.toggleListListElement');
-		var label = target.down('.toggleListLabel');
-		var checkbox = target.down('.toggleListCheckbox');
+		var target = event.findElement('li.toggleButtonListListElement');
+		var label = target.down('.toggleButtonListLabel');
+		var checkbox = target.down('.toggleButtonListCheckbox');
 		
 		if (label.hasClassName('selected')) {
 			label.toggleClassName('hoverSelected');
@@ -95,7 +95,7 @@ var ToggleList = Class.create({
 	},
 	
 	reset: function() {
-		$$('#'+this.id+' .toggleListCheckbox').each(function(box) {
+		$$('#'+this.id+' .toggleButtonListCheckbox').each(function(box) {
 			var label = box.up('label');
 			
 			if (this.startState.indexOf(parseInt(box.getAttribute('value'))) > -1) {

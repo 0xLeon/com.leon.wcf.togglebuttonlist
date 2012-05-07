@@ -1,13 +1,13 @@
-/* ### -- -- -- -- -- Toggle List Styles -- -- -- -- -- ### */
+/* ### -- -- -- -- -- Toggle Button List Styles -- -- -- -- -- ### */
 /* 
 
-File: toggleList.css 
+File: toggleButtonList.css 
 Copyright: 2012 Stefan Hahn
 License: GNU Lesser General Public License <http://opensource.org/licenses/lgpl-license.php>
 
 */
 
-.toggleList ul {
+.toggleButtonList ul {
 	list-style-type: none;
 	border-width: 1px;
 	border-style: solid;
@@ -15,18 +15,18 @@ License: GNU Lesser General Public License <http://opensource.org/licenses/lgpl-
 	padding: 0 0 1px 1px;
 }
 
-.toggleList ul:after {
+.toggleButtonList ul:after {
 	content: "";
 	display: block;
 	clear: both;
 }
 
-.toggleList li {
+.toggleButtonList li {
 	float: left;
 	display: inline-block;
 }
 
-.toggleList label {
+.toggleButtonList label {
 	text-align: center;
 	margin: 1px 1px 0 0;
 	padding: 4px;
@@ -34,14 +34,14 @@ License: GNU Lesser General Public License <http://opensource.org/licenses/lgpl-
 	cursor: auto;
 }
 
-.toggleList label.hover,
-.toggleList label.hoverSelected {
+.toggleButtonList label.hover,
+.toggleButtonList label.hoverSelected {
 	border-width: 1px;
 	border-style: solid;
 	padding: 3px;
 	cursor: pointer;
 }
 
-.toggleList {
+.toggleButtonList {
 	overflow: auto;
 }
