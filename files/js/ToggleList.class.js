@@ -26,7 +26,9 @@ var ToggleList = Class.create({
 			}
 			
 			li.observe('click', function(event) {
-				this.toggle(event);
+				var checkbox = event.findElement('.toggleListListElement').down('.toggleListCheckbox');
+				
+				checkbox.click();
 			}.bindAsEventListener(this));
 			checkbox.observe('change', function(event) {
 				this.toggle(event);
@@ -34,15 +36,22 @@ var ToggleList = Class.create({
 			
 			['mouseover', 'mouseout'].each(function(eventType) {
 				li.observe(eventType, function(event) {
+					var checkbox = event.findElement('.toggleListListElement').down('.toggleListCheckbox');
+					
+					if (document.activeElement === checkbox) {
+						checkbox.blur();
+					}
+					else {
+						checkbox.focus();
+					}
+				}.bindAsEventListener(this));
+			}, this);
+			
+			['focus', 'blur'].each(function(eventType) {
+				checkbox.observe(eventType, function(event) {
 					this.hover(event);
 				}.bindAsEventListener(this));
 			}, this);
-			// todo: add 'hovering' support for pointerless devices
-			// ['focus', 'blur'].each(function(eventType) {
-				// checkbox.observe(eventType, function(event) {
-					// this.hover(event);
-				// }.bindAsEventListener(this));
-			// }, this);
 		}, this);
 		
 		var form = $(this.id).up('form');
@@ -55,11 +64,10 @@ var ToggleList = Class.create({
 	},
 	
 	toggle: function(event) {
-		var isClickEvent = (event.type == 'click');
-		var target = event.findElement('li.toggleListListElement');
+		var target = event.findElement('.toggleListListElement');
 		var label = target.down('.toggleListLabel')
 		var checkbox = target.down('.toggleListCheckbox');
-		var checked = ((isClickEvent) ? (!checkbox.checked) : (checkbox.checked));
+		var checked = checkbox.checked;
 		
 		if (checked) {
 			label.removeClassName('hover');
@@ -70,10 +78,6 @@ var ToggleList = Class.create({
 			label.removeClassName('selected');
 			label.removeClassName('hoverSelected');
 			label.addClassName('hover');
-		}
-		
-		if (isClickEvent) {
-			checkbox.checked = checked;
 		}
 	},
 	
